@@ -9,7 +9,7 @@ export class Categoria {
 
   @IsNotEmpty()
   @Column({ length: 255, nullable: false })
-  genero!: string; // Ex: RPG, Beat 'em up, Plataforma
+  genero!: string;
 
   @OneToMany(() => Produto, (produto) => produto.categoria)
   produto!: Produto[];
